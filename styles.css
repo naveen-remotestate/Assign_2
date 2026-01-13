@@ -59,6 +59,7 @@ body {
 }
 
 .user-card {
+    cursor: pointer;
     justify-content: space-between;
     margin-left: 35px;
 
@@ -84,6 +85,7 @@ body {
 }
 
 .user-card__name {
+    cursor: pointer;
     font-family: Spline Sans;
     font-style: SemiBold;
     line-height: 140%;
@@ -271,7 +273,7 @@ body {
     margin-bottom: 16px;
 }
 
-.breadcrumb-link {
+.breadcrumb-main {
     color: #436D7C;
 }
 
@@ -305,24 +307,26 @@ body {
 .search-box input {
     width: 260px;
     padding: 10px 36px 10px 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    font-size: 14px;
+    border: 0.5px solid #B5BDCD;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #B5BDCD;
+    font-weight:400;
 }
 
 .search-icon {
     position: absolute;
     right: 12px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     font-size: 14px;
-    color: #9ca3af;
+    color: #B5BDCD;
 }
 
 .table-card {
     background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    border: 1px solid #e0e3e6;
     overflow: hidden;
 }
 
@@ -337,22 +341,19 @@ thead {
 
 th {
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: #374151;
     padding: 16px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #E8ECF1;
 }
 
 td {
     padding: 16px;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #E8ECF1;
     vertical-align: middle;
 }
 
-tr:last-child td {
-    border-bottom: none;
-}
 
 .col-checkbox {
     width: 40px;
