@@ -278,7 +278,6 @@ body {
     background: #ffffff;
     border-radius: 8px;
     border: 1px solid #e0e3e6;
-    overflow: hidden;
 }
 
 .documents-table {
@@ -375,7 +374,7 @@ td {
 }
 
 .btn-outline:hover {
-    background: #f9fafb;
+    background: #D3F7B5;
 }
 
 .menu {
@@ -393,6 +392,92 @@ td {
 }
 .add-btn{
     width: 60px;
-    color: #ffffff;
-    background-color: #436D7C;
+    color: #6b7280;
+    background-color: #FFFFFF;
+}
+.add-btn:hover{
+    background: #D3F7B5;
+}
+
+.more-cell {
+  text-align: right;
+  vertical-align: middle;
+}
+
+
+.more-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.more-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-btn:hover {
+  background-color: #F2F4F7;
+}
+
+.more-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+
+
+.more-dropdown {
+  position: absolute;
+  top: 38px;
+  right: 0;
+
+  width: 120px;
+  background: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+}
+
+
+.more-wrapper:hover .more-dropdown {
+  display: flex;
+}
+
+
+.more-dropdown button {
+  padding: 10px 14px;
+  font-size: 13px;
+  font-family: 'Spline Sans', sans-serif;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #2A2A2A;
+}
+
+.more-dropdown button:hover {
+  background-color: #F2F4F7;
+}
+
+
+.more-dropdown .delete {
+  color: #D92D20;
+}
+.more-dropdown .delete:hover {
+  background: #D3F7B5;
 }

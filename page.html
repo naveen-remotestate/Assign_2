@@ -11,206 +11,271 @@
 
 <body>
     <div class="container">
-    <aside class="sidebar">
-        <div class="sidebar__top">
+        <aside class="sidebar">
+            <div class="sidebar__top">
 
-            <div class="brand">
-                <span class="brand__name"><img src="images/brand_logo.svg" alt="Brand Logo icon and Name- Neptune"></span>
+                <div class="brand">
+                    <span class="brand__name"><img src="images/brand_logo.svg"
+                            alt="Brand Logo icon and Name- Neptune"></span>
+                </div>
+
+                <div class="user-card">
+                    <div class="leftdiv">
+                        <div class="user-card__img"><img src="images/Usercard_icon.svg"></div>
+                        <div class="user-card__info">
+                            <span class="user-card__name">Jessica Thompson</span>
+                            <span class="user-card__role">Primary User</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img id="icon__right" src="images/dropdown_icon.svg" alt="icon pointing below">
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/home_icon.svg" alt="home icon"></div>
+                            <div class="nav__text">Home</div>
+                        </div>
+                    </a>
+                    <a href="#" class="nav__item nav__item--active">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/document_icon.svg" alt="Document icon"></div>
+                            <div class="nav__text">Documents</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/chat_icon.svg" alt="Chat icon"></div>
+                            <div class="nav__text">Chat with Neptune</div>
+                        </div>
+                    </a>
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/help_icon.svg" alt="Help icon"></div>
+                            <div class="nav__text">Help</div>
+                        </div>
+                    </a>
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/settings_icon.svg" alt="Setting icon"></div>
+                            <div class="nav__text">Settings</div>
+                        </div>
+                    </a>
+                </nav>
+
             </div>
 
-            <div class="user-card">
-                <div class="leftdiv">
-                    <div class="user-card__img"><img src="images/Usercard_icon.svg"></div>
-                    <div class="user-card__info">
-                        <span class="user-card__name">Jessica Thompson</span>
-                        <span class="user-card__role">Primary User</span>
-                    </div>
+            <div class="sidebar__bottom">
+                <div><img id="phone__icon" src="images/phone_icon.svg" alt="phone icon"></div>
+                <div>
+                    <p class="support__title">Having trouble?</p>
                 </div>
                 <div>
-                    <img id="icon__right" src="images/dropdown_icon.svg" alt="icon pointing below">
+                    <p class="support__text">
+                        Feel free to contact us and we will always help you through the process.
+                    </p>
+                </div>
+                <div> <button class="support__button">Contact us</button></div>
+            </div>
+        </aside>
+        <div class="page">
+
+            <div class="breadcrumb">
+                <span class="breadcrumb-main">Home</span>
+                <span class="breadcrumb-separator"><img src="images/breadcrumb_arrow.svg"></span>
+                <span class="breadcrumb-current">Documents</span>
+            </div>
+
+            <div class="header">
+                <h1 class="page-title">My Documents</h1>
+                <div class="addAndSearch">
+                    <div>
+                        <button class="add-btn btn-outline">Add</button>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" placeholder="Search documents" />
+                        <span class="search-icon"><img id="placeholder_icon" src="images/search_icon.svg"></span>
+                    </div>
                 </div>
             </div>
 
-            <nav class="nav">
-                <a href="#" class="nav__item">
-                    <div class="nav__menu">
-                        <div class="nav__icon"><img src="images/home_icon.svg" alt="home icon"></div>
-                        <div class="nav__text">Home</div>
-                    </div>
-                </a>
-                <a href="#" class="nav__item nav__item--active">
-                    <div class="nav__menu">
-                        <div class="nav__icon"><img src="images/document_icon.svg" alt="Document icon"></div>
-                        <div class="nav__text">Documents</div>
-                    </div>
-                </a>
+            <div class="table-card">
+                <table class="documents-table">
+                    <thead>
+                        <tr>
+                            <th class="col-checkbox">
+                                <input type="checkbox" />
+                            </th>
+                            <th class="col-name">Document Name</th>
+                            <th class="col-status">Status</th>
+                            <th class="col-date">Last Modified</th>
+                            <th class="col-action"></th>
+                            <th class="col-menu"></th>
+                        </tr>
+                    </thead>
 
-                <a href="#" class="nav__item">
-                    <div class="nav__menu">
-                        <div class="nav__icon"><img src="images/chat_icon.svg" alt="Chat icon"></div>
-                        <div class="nav__text">Chat with Neptune</div>
-                    </div>
-                </a>
-                <a href="#" class="nav__item">
-                    <div class="nav__menu">
-                        <div class="nav__icon"><img src="images/help_icon.svg" alt="Help icon"></div>
-                        <div class="nav__text">Help</div>
-                    </div>
-                </a>
-                <a href="#" class="nav__item">
-                    <div class="nav__menu">
-                        <div class="nav__icon"><img src="images/settings_icon.svg" alt="Setting icon"></div>
-                        <div class="nav__text">Settings</div>
-                    </div>
-                </a>
-            </nav>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td class="doc-title">Title of Document Goes Here</td>
+                            <td>
+                                <span class="status needs-signing">Needs Signing</span>
+                            </td>
+                            <td class="date">
+                                10/22/2024<br /><span>2:01 pm</span>
+                            </td>
+                            <td>
+                                <button class="btn-outline">Sign now</button>
+                            </td>
+                            <td class="more-cell">
+                                <div class="more-wrapper">
+                                    <button class="more-btn">
+                                        <img src="images/threeDot_icon.svg" alt="three dot button">
+                                    </button>
+                                    <div class="more-dropdown">
+                                        <button>Edit</button>
+                                        <button class="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 
-        </div>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td class="doc-title">Title of Document Goes Here</td>
+                            <td>
+                                <span class="status pending">Pending</span>
+                                <div class="status-sub">Waiting for <strong>1 person</strong></div>
+                            </td>
+                            <td class="date">
+                                10/22/2024<br /><span>2:01 pm</span>
+                            </td>
+                            <td>
+                                <button class="btn-outline">Preview</button>
+                            </td>
+                            <td class="more-cell">
+                                <div class="more-wrapper">
+                                    <button class="more-btn">
+                                        <img src="images/threeDot_icon.svg" alt="three dot button">
+                                    </button>
+                                    <div class="more-dropdown">
+                                        <button>Edit</button>
+                                        <button class="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 
-        <div class="sidebar__bottom">
-            <div><img id="phone__icon" src="images/phone_icon.svg" alt="phone icon"></div>
-            <div><p class="support__title">Having trouble?</p></div>
-            <div><p class="support__text">
-                Feel free to contact us and we will always help you through the process.
-            </p></div>
-           <div> <button class="support__button">Contact us</button></div>
-        </div>
-    </aside>
-    <div class="page">
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td class="doc-title">Title of Document Goes Here</td>
+                            <td>
+                                <span class="status pending">Pending</span>
+                                <div class="status-sub">Waiting for <strong>2 people</strong></div>
+                            </td>
+                            <td class="date">
+                                10/22/2024<br /><span>2:01 pm</span>
+                            </td>
+                            <td>
+                                <button class="btn-outline">Preview</button>
+                            </td>
+                            <td class="more-cell">
+                                <div class="more-wrapper">
+                                    <button class="more-btn">
+                                        <img src="images/threeDot_icon.svg" alt="three dot button">
+                                    </button>
+                                    <div class="more-dropdown">
+                                        <button>Edit</button>
+                                        <button class="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 
-        <div class="breadcrumb">
-            <span class="breadcrumb-main">Home</span>
-            <span class="breadcrumb-separator"><img src="images/breadcrumb_arrow.svg"></span>
-            <span class="breadcrumb-current">Documents</span>
-        </div>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td class="doc-title">Title of Document Goes Here</td>
+                            <td>
+                                <span class="status completed">Completed</span>
+                            </td>
+                            <td class="date">
+                                10/22/2024<br /><span>2:01 pm</span>
+                            </td>
+                            <td>
+                                <button class="btn-outline">Download PDF</button>
+                            </td>
+                            <td class="more-cell">
+                                <div class="more-wrapper">
+                                    <button class="more-btn">
+                                        <img src="images/threeDot_icon.svg" alt="three dot button">
+                                    </button>
+                                    <div class="more-dropdown">
+                                        <button>Edit</button>
+                                        <button class="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 
-        <div class="header">
-            <h1 class="page-title">My Documents</h1>
-            <div class="addAndSearch">
-            <div>
-                <button class="add-btn btn-outline">Add</button>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td class="doc-title">Title of Document Goes Here</td>
+                            <td>
+                                <span class="status completed">Completed</span>
+                            </td>
+                            <td class="date">
+                                10/22/2024<br /><span>2:01 pm</span>
+                            </td>
+                            <td>
+                                <button class="btn-outline">Download PDF</button>
+                            </td>
+                            <td class="more-cell">
+                                <div class="more-wrapper">
+                                    <button class="more-btn">
+                                        <img src="images/threeDot_icon.svg" alt="three dot button">
+                                    </button>
+                                    <div class="more-dropdown">
+                                        <button>Edit</button>
+                                        <button class="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td class="doc-title">Title of Document Goes Here</td>
+                            <td>
+                                <span class="status completed">Completed</span>
+                            </td>
+                            <td class="date">
+                                10/22/2024<br /><span>2:01 pm</span>
+                            </td>
+                            <td>
+                                <button class="btn-outline">Download PDF</button>
+                            </td>
+                            <td class="more-cell">
+                                <div class="more-wrapper">
+                                    <button class="more-btn">
+                                        <img src="images/threeDot_icon.svg" alt="three dot button">
+                                    </button>
+                                    <div class="more-dropdown">
+                                        <button>Edit</button>
+                                        <button class="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
 
-            <div class="search-box">
-                <input type="text" placeholder="Search documents" />
-                <span class="search-icon"><img id="placeholder_icon" src="images/search_icon.svg"></span>
-            </div>
-            </div>
         </div>
-
-        <div class="table-card">
-            <table class="documents-table">
-                <thead>
-                    <tr>
-                        <th class="col-checkbox">
-                            <input type="checkbox" />
-                        </th>
-                        <th class="col-name">Document Name</th>
-                        <th class="col-status">Status</th>
-                        <th class="col-date">Last Modified</th>
-                        <th class="col-action"></th>
-                        <th class="col-menu"></th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" /></td>
-                        <td class="doc-title">Title of Document Goes Here</td>
-                        <td>
-                            <span class="status needs-signing">Needs Signing</span>
-                        </td>
-                        <td class="date">
-                            10/22/2024<br /><span>2:01 pm</span>
-                        </td>
-                        <td>
-                            <button class="btn-outline">Sign now</button>
-                        </td>
-                        <td class="menu"><img src="images/threeDot_icon.svg"></td>
-                    </tr>
-
-                    <tr>
-                        <td><input type="checkbox" /></td>
-                        <td class="doc-title">Title of Document Goes Here</td>
-                        <td>
-                            <span class="status pending">Pending</span>
-                            <div class="status-sub">Waiting for <strong>1 person</strong></div>
-                        </td>
-                        <td class="date">
-                            10/22/2024<br /><span>2:01 pm</span>
-                        </td>
-                        <td>
-                            <button class="btn-outline">Preview</button>
-                        </td>
-                        <td class="menu"><img src="images/threeDot_icon.svg"></td>
-                    </tr>
-
-                    <tr>
-                        <td><input type="checkbox" /></td>
-                        <td class="doc-title">Title of Document Goes Here</td>
-                        <td>
-                            <span class="status pending">Pending</span>
-                            <div class="status-sub">Waiting for <strong>2 people</strong></div>
-                        </td>
-                        <td class="date">
-                            10/22/2024<br /><span>2:01 pm</span>
-                        </td>
-                        <td>
-                            <button class="btn-outline">Preview</button>
-                        </td>
-                        <td class="menu"><img src="images/threeDot_icon.svg"></td>
-                    </tr>
-
-                    <tr>
-                        <td><input type="checkbox" /></td>
-                        <td class="doc-title">Title of Document Goes Here</td>
-                        <td>
-                            <span class="status completed">Completed</span>
-                        </td>
-                        <td class="date">
-                            10/22/2024<br /><span>2:01 pm</span>
-                        </td>
-                        <td>
-                            <button class="btn-outline">Download PDF</button>
-                        </td>
-                        <td class="menu"><img src="images/threeDot_icon.svg"></td>
-                    </tr>
-
-                    <tr>
-                        <td><input type="checkbox" /></td>
-                        <td class="doc-title">Title of Document Goes Here</td>
-                        <td>
-                            <span class="status completed">Completed</span>
-                        </td>
-                        <td class="date">
-                            10/22/2024<br /><span>2:01 pm</span>
-                        </td>
-                        <td>
-                            <button class="btn-outline">Download PDF</button>
-                        </td>
-                        <td class="menu"><img src="images/threeDot_icon.svg"></td>
-                    </tr>
-
-                    <tr>
-                        <td><input type="checkbox" /></td>
-                        <td class="doc-title">Title of Document Goes Here</td>
-                        <td>
-                            <span class="status completed">Completed</span>
-                        </td>
-                        <td class="date">
-                            10/22/2024<br /><span>2:01 pm</span>
-                        </td>
-                        <td>
-                            <button class="btn-outline">Download PDF</button>
-                        </td>
-                        <td class="menu"><img src="images/threeDot_icon.svg"></td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-
-    </div>
     </div>
 </body>
 
