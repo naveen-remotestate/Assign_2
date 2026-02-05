@@ -87,9 +87,9 @@
         <div class="page">
 
             <div class="breadcrumb">
-                <span class="breadcrumb-main">Home</span>
+                <span class="breadcrumb-main"><a>Home</a></span>
                 <span class="breadcrumb-separator"><img src="images/breadcrumb_arrow.svg"></span>
-                <span class="breadcrumb-current">Documents</span>
+                <span class="breadcrumb-current"><a>Documents</a></span>
             </div>
 
             <div class="header">
@@ -100,14 +100,14 @@
                     </div>
 
                     <div class="search-box">
-                        <input type="text" placeholder="Search documents" />
+                        <input id="inputBox" onkeyup="searchFilter()" type="text" placeholder="Search documents" />
                         <span class="search-icon"><img id="placeholder_icon" src="images/search_icon.svg"></span>
                     </div>
                 </div>
             </div>
 
             <div class="table-card">
-                <table class="documents-table">
+                <table class="documents-table" id="tableBox">
                     <thead>
                         <tr>
                             <th class="col-checkbox">
@@ -121,161 +121,40 @@
                         </tr>
                     </thead>
 
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td class="doc-title">Title of Document Goes Here</td>
-                            <td>
-                                <span class="status needs-signing">Needs Signing</span>
-                            </td>
-                            <td class="date">
-                                10/22/2024<br /><span>2:01 pm</span>
-                            </td>
-                            <td>
-                                <button class="btn-outline">Sign now</button>
-                            </td>
-                            <td class="more-cell">
-                                <div class="more-wrapper">
-                                    <button class="more-btn">
-                                        <img src="images/threeDot_icon.svg" alt="three dot button">
-                                    </button>
-                                    <div class="more-dropdown">
-                                        <button>Edit</button>
-                                        <button class="delete">Delete</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td class="doc-title">Title of Document Goes Here</td>
-                            <td>
-                                <span class="status pending">Pending</span>
-                                <div class="status-sub">Waiting for <strong>1 person</strong></div>
-                            </td>
-                            <td class="date">
-                                10/22/2024<br /><span>2:01 pm</span>
-                            </td>
-                            <td>
-                                <button class="btn-outline">Preview</button>
-                            </td>
-                            <td class="more-cell">
-                                <div class="more-wrapper">
-                                    <button class="more-btn">
-                                        <img src="images/threeDot_icon.svg" alt="three dot button">
-                                    </button>
-                                    <div class="more-dropdown">
-                                        <button>Edit</button>
-                                        <button class="delete">Delete</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td class="doc-title">Title of Document Goes Here</td>
-                            <td>
-                                <span class="status pending">Pending</span>
-                                <div class="status-sub">Waiting for <strong>2 people</strong></div>
-                            </td>
-                            <td class="date">
-                                10/22/2024<br /><span>2:01 pm</span>
-                            </td>
-                            <td>
-                                <button class="btn-outline">Preview</button>
-                            </td>
-                            <td class="more-cell">
-                                <div class="more-wrapper">
-                                    <button class="more-btn">
-                                        <img src="images/threeDot_icon.svg" alt="three dot button">
-                                    </button>
-                                    <div class="more-dropdown">
-                                        <button>Edit</button>
-                                        <button class="delete">Delete</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td class="doc-title">Title of Document Goes Here</td>
-                            <td>
-                                <span class="status completed">Completed</span>
-                            </td>
-                            <td class="date">
-                                10/22/2024<br /><span>2:01 pm</span>
-                            </td>
-                            <td>
-                                <button class="btn-outline">Download PDF</button>
-                            </td>
-                            <td class="more-cell">
-                                <div class="more-wrapper">
-                                    <button class="more-btn">
-                                        <img src="images/threeDot_icon.svg" alt="three dot button">
-                                    </button>
-                                    <div class="more-dropdown">
-                                        <button>Edit</button>
-                                        <button class="delete">Delete</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td class="doc-title">Title of Document Goes Here</td>
-                            <td>
-                                <span class="status completed">Completed</span>
-                            </td>
-                            <td class="date">
-                                10/22/2024<br /><span>2:01 pm</span>
-                            </td>
-                            <td>
-                                <button class="btn-outline">Download PDF</button>
-                            </td>
-                            <td class="more-cell">
-                                <div class="more-wrapper">
-                                    <button class="more-btn">
-                                        <img src="images/threeDot_icon.svg" alt="three dot button">
-                                    </button>
-                                    <div class="more-dropdown">
-                                        <button>Edit</button>
-                                        <button class="delete">Delete</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <!-- <tr>
-                            <td><input type="checkbox" /></td>
-                            <td class="doc-title">Title of Document Goes Here</td>
-                            <td>
-                                <span class="status completed">Completed</span>
-                            </td>
-                            <td class="date">
-                                10/22/2024<br /><span>2:01 pm</span>
-                            </td>
-                            <td>
-                                <button class="btn-outline">Download PDF</button>
-                            </td>
-                            <td class="more-cell">
-                                <div class="more-wrapper">
-                                    <button class="more-btn">
-                                        <img src="images/threeDot_icon.svg" alt="three dot button">
-                                    </button>
-                                    <div class="more-dropdown">
-                                        <button>Edit</button>
-                                        <button class="delete">Delete</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr> -->
-
+                    <tbody id="documentsBody">
+        
                     </tbody>
                 </table>
+            </div>
+            <div class="form_body hidden">
+                <div class="form_div">
+                    <form action="post" id="documentForm">
+                        <div class="form_input">
+                            <div>
+                                <label for="docName">Enter Document Name</label>
+                                <input type="text" id="docName" placeholder="Document Title" required>
+                            </div>
+
+                            <div>
+                                <label for="status">Status</label>
+                                <select name="statusInput" id="status" required>
+                                    <option value="select">Select</option>
+                                    <option value="signing">Needs Signing</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="completed">Completed</option>
+                                </select>
+                            </div>
+                            <div id="waiting_div" class="hidden">
+                                <label for="waiting_person">Person Waiting</label>
+                                <input type="number" id="waiting_person" min="1" placeholder="Enter number of person">
+                            </div>
+                        </div>
+                        <div class="form_actions">
+                            <button type="submit">Add</button>
+                            <button type="button" id="cancelBtn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </div>

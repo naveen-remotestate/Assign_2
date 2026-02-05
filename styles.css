@@ -28,12 +28,17 @@ body {
     padding: 20px;
 }
 
+.sidebar__top {
+    height: 500px;
+}
+
 .brand {
     height: 20%;
     width: 80%;
     display: flex;
     align-content: center;
     margin-top: 36px;
+    margin-bottom: -40px;
 }
 
 
@@ -170,6 +175,7 @@ body {
 
 #phone__icon {
     padding: 10px;
+    margin: 0px 0px -20px -5px;
 }
 
 .support__title {
@@ -185,17 +191,12 @@ body {
 }
 
 .support__text {
-
-
     font-family: 'Spline Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 140%;
-
+    /* line-height: 140%; */
     color: #626D82;
-
-
 }
 
 .support__button {
@@ -236,6 +237,7 @@ body {
     font-size: 14px;
     color: #9ca3af;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .breadcrumb-main {
@@ -258,10 +260,7 @@ body {
     font-family: 'Zin Display';
     font-weight: 600;
     font-size: 33px;
-
     color: #2A2A2A;
-
-
     font-weight: 700;
 }
 
@@ -296,12 +295,13 @@ body {
     border-radius: 8px;
     border: 1px solid #e0e3e6;
     border-collapse: collapse;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .documents-table {
     width: 100%;
     border-collapse: collapse;
+    /* overflow: hidden; */
 }
 
 
@@ -312,13 +312,14 @@ th {
     color: #374151;
     padding: 16px;
     border-bottom: 1px solid #E8ECF1;
-    
+    border-collapse: collapse;
 }
 
 td {
     padding: 16px;
     border-bottom: 1px solid #E8ECF1;
     vertical-align: middle;
+    border-collapse: collapse;
 }
 
 
@@ -409,7 +410,7 @@ td {
 }
 
 .add-btn {
-    width: 60px;
+    width: 70px;
     color: #6b7280;
     background-color: #FFFFFF;
 }
@@ -418,13 +419,13 @@ td {
     background: #D3F7B5;
 }
 
-.more-cell {
+/* .more-cell {
     text-align: right;
     vertical-align: middle;
-}
+} */
 
 
-.more-wrapper {
+.threeDotDiv {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -432,53 +433,44 @@ td {
 }
 
 
-.more-btn {
+.threeDotBtn {
     width: 32px;
     height: 32px;
     border: none;
     background: transparent;
     border-radius: 6px;
     cursor: pointer;
-
-    display: flex;
+    display: hidden;
     align-items: center;
     justify-content: center;
 }
 
-.more-btn:hover {
+.threeDotBtn:hover {
     background-color: #F2F4F7;
 }
 
-.more-btn img {
-    width: 16px;
-    height: 16px;
-}
 
 
-
-.more-dropdown {
+.editDelete {
     position: absolute;
     top: 38px;
     right: 0;
-
     width: 120px;
     background: #FFFFFF;
     border: 1px solid #E4E7EC;
     border-radius: 8px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-
-    display: none;
-    flex-direction: column;
+    /* display: none; */
+    /* flex-direction: column; */
     z-index: 10;
 }
 
-
-.more-wrapper:hover .more-dropdown {
-    display: flex;
+.hiddenThreeDot {
+    display: none;
 }
 
 
-.more-dropdown button {
+.editDelete button {
     padding: 10px 14px;
     font-size: 13px;
     font-family: 'Spline Sans', sans-serif;
@@ -487,17 +479,112 @@ td {
     text-align: left;
     cursor: pointer;
     color: #2A2A2A;
+    width: 100%;
 }
 
-.more-dropdown button:hover {
+.editDelete button:hover {
     background-color: #F2F4F7;
 }
 
 
-.more-dropdown .delete {
+.editDelete .delete {
     color: #D92D20;
 }
 
-.more-dropdown .delete:hover {
+.editDelete .delete:hover {
     background: #D3F7B5;
+}
+
+
+.form_body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+}
+
+.display {
+    display: flex;
+}
+
+.hidden {
+    display: hidden;
+}
+
+/* Form wrapper */
+.form_div {
+    width: 100%;
+    max-width: 550px;
+    height: fit-content;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Inputs layout */
+.form_input {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Labels & inputs */
+.form_input label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 2%;
+    color: #436D7C;
+}
+
+.form_input input,
+.form_input select {
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 6px;
+    padding-left: 7px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #f4f6f8;
+}
+
+
+
+/* Buttons area */
+.form_actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+/* Buttons */
+.form_actions button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px ridge;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Submit */
+.form_actions button[type="submit"] {
+    background: #D3F7B5;
+    color: #436D7C;
+}
+
+/* Cancel */
+#cancelBtn {
+    background: #ff4d4f;
+    color: #436D7C;
+}
+
+#threeDot {
+    font-weight: 600;
 }
