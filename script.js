@@ -35,9 +35,12 @@ statusSelect.addEventListener("change", () => {
 // display the form
 addBtn.addEventListener("click", () => {
   form.reset();
+<<<<<<< HEAD
   editIndex = null;
   waiting_div.classList.add("hidden");
 
+=======
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
   formBody.classList.remove("hidden");
   formBody.classList.add("display");
 
@@ -45,8 +48,13 @@ addBtn.addEventListener("click", () => {
 
 // hide form when clicked on cancle button
 cancelBtn.addEventListener("click", () => {
+<<<<<<< HEAD
   // form.reset();
   // editIndex=null;
+=======
+  form.reset();
+  waiting_div.classList.add("hidden");
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
 
   formBody.classList.add("hidden");
   formBody.classList.remove("display");
@@ -64,6 +72,7 @@ function formValidation(status, title) {
   return "valid"
 }
 
+<<<<<<< HEAD
 const searchInput = document.getElementById("inputBox");
 
 //search functionality
@@ -71,6 +80,15 @@ function searchFilter() {
   const search = searchInput.value.toUpperCase();
   const table = document.getElementById("tableBox");
   const tr = table.getElementsByTagName("tr");
+=======
+
+//search functionality
+function searchFilter() {
+  const searchInput = document.getElementById("inputBox");
+  search = searchInput.value.toUpperCase();
+  const table = document.getElementById("tableBox");
+  tr = table.getElementsByTagName("tr");
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
   // console.log(tr);
   for (let i = 1; i < tr.length; i++) {
     let td = tr[i].getElementsByTagName("td")[1];
@@ -81,9 +99,16 @@ function searchFilter() {
     else {
       tr[i].style.display = "none";
     }
+<<<<<<< HEAD
   }
 }
 searchInput.value = ""
+=======
+
+  }
+}
+
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
 // form submission
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -101,14 +126,23 @@ form.addEventListener("submit", (e) => {
     // when a new item is to be added
 
     const newDoc = { title, status, waitingCount, date, time };
+<<<<<<< HEAD
     documents.push(newDoc);//pushing at the end
+=======
+    documents.push(newDoc);
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
   } else {
     // edit the selected item based on editIndex
     documents[editIndex].title = title;
     documents[editIndex].status = status;
     documents[editIndex].waitingCount = waitingCount;
+<<<<<<< HEAD
     documents[editIndex].date = date;
     documents[editIndex].time = time;
+=======
+    documents[editIndex].date = date; 
+    documents[editIndex].time = time; 
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
     editIndex = null; // reset edit mode
   }
 
@@ -159,6 +193,7 @@ function addRow(doc, index) {
     </td>
   `;
 
+<<<<<<< HEAD
   tableBody.appendChild(row);
 
   const btn = row.querySelector(".threeDotBtn");
@@ -166,6 +201,14 @@ function addRow(doc, index) {
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
     editDelete.classList.toggle("hiddenThreeDot");            //Toggle
+=======
+  tableBody.appendChild(row); // add to top
+
+  const btn = row.querySelector(".threeDotBtn");
+  const editDelete = row.querySelector(".editDelete");
+  btn.addEventListener("click", () => {
+    editDelete.classList.toggle("hiddenThreeDot");
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
   });
 }
 
@@ -192,11 +235,19 @@ tableBody.addEventListener("click", (e) => {
 
   //edit
   if (e.target.classList.contains("edit")) {
+<<<<<<< HEAD
     e.target.closest(".editDelete").classList.add("hiddenThreeDot");
 
     const doc = documents[index];
     editIndex = index; // set edit mode
 
+=======
+    e.target.closest(".editDelete").classList.add("hidden");
+
+    const doc = documents[index];
+    editIndex = index; // set edit mode
+    
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
     // show form
     formBody.classList.remove("hidden");
     formBody.classList.add("display");
@@ -283,6 +334,7 @@ const formDiv = document.querySelector(".form_div");
 
 // click on overlay close form
 formBody.addEventListener("click", () => {
+<<<<<<< HEAD
 
   form.reset();
   editIndex = null;
@@ -291,10 +343,19 @@ formBody.addEventListener("click", () => {
   formBody.classList.add("hidden");
   formBody.classList.remove("display");
 
+=======
+  form.reset();
+  waiting_div.classList.add("hidden");
+  formBody.classList.add("hidden");
+  formBody.classList.remove("display");
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e
 });
 
 // prevent clicking inside form from closing it
 formDiv.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+<<<<<<< HEAD
 //300lines
+=======
+>>>>>>> ddadf8fe5b6c99c4d66d79948925bc23b63cd18e

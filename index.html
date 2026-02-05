@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neptune Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar__top">
+
+                <div class="brand">
+                    <span class="brand__name"><img src="images/brand_logo.svg"
+                            alt="Brand Logo icon and Name- Neptune"></span>
+                </div>
+
+                <div class="user-card">
+                    <div class="leftdiv">
+                        <div class="user-card__img"><img src="images/Usercard_icon.svg"></div>
+                        <div class="user-card__info">
+                            <span class="user-card__name">Jessica Thompson</span>
+                            <span class="user-card__role">Primary User</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img id="icon__right" src="images/dropdown_icon.svg" alt="icon pointing below">
+                    </div>
+
+                </div>
+                <button id="logout__btn" class="hidden"><b>Logout</b></button>
+
+
+                <nav class="nav">
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/home_icon.svg" alt="home icon"></div>
+                            <div class="nav__text">Home</div>
+                        </div>
+                    </a>
+                    <a href="#" class="nav__item nav__item--active">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/document_icon.svg" alt="Document icon"></div>
+                            <div class="nav__text">Documents</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/chat_icon.svg" alt="Chat icon"></div>
+                            <div class="nav__text">Chat with Neptune</div>
+                        </div>
+                    </a>
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/help_icon.svg" alt="Help icon"></div>
+                            <div class="nav__text">Help</div>
+                        </div>
+                    </a>
+                    <a href="#" class="nav__item">
+                        <div class="nav__menu">
+                            <div class="nav__icon"><img src="images/settings_icon.svg" alt="Setting icon"></div>
+                            <div class="nav__text">Settings</div>
+                        </div>
+                    </a>
+                </nav>
+
+            </div>
+
+            <div class="sidebar__bottom">
+                <div><img id="phone__icon" src="images/phone_icon.svg" alt="phone icon"></div>
+                <div>
+                    <p class="support__title">Having trouble?</p>
+                </div>
+                <div>
+                    <p class="support__text">
+                        Feel free to contact us and we will always help you through the process.
+                    </p>
+                </div>
+                <div> <button class="support__button">Contact us</button></div>
+            </div>
+        </aside>
+        <div class="page">
+
+            <div class="breadcrumb">
+                <span class="breadcrumb-main">Home</span>
+                <span class="breadcrumb-separator"><img src="images/breadcrumb_arrow.svg"></span>
+                <span class="breadcrumb-current">Documents</span>
+            </div>
+
+            <div class="header">
+                <h1 class="page-title">My Documents</h1>
+                <div class="addAndSearch">
+                    <div>
+                        <button class="add-btn btn-outline">Add</button>
+                    </div>
+
+                    <div class="search-box">
+                        <input id="inputBox" onkeyup="searchFilter()" type="text" placeholder="Search documents" />
+                        <span class="search-icon"><img id="placeholder_icon" src="images/search_icon.svg"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <table class="documents-table" id="tableBox">
+                    <thead>
+                        <tr>
+                            <th class="col-checkbox">
+                                <input type="checkbox" />
+                            </th>
+                            <th class="col-name">Document Name</th>
+                            <th class="col-status">Status</th>
+                            <th class="col-date">Last Modified</th>
+                            <th class="col-action"></th>
+                            <th class="col-menu"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="documentsBody">
+        
+                    </tbody>
+                </table>
+            </div>
+            <div class="form_body hidden">
+                <div class="form_div">
+                    <form action="post" id="documentForm">
+                        <div class="form_input">
+                            <div>
+                                <label for="docName">Enter Document Name</label>
+                                <input type="text" id="docName" placeholder="Document Title" required>
+                            </div>
+
+                            <div>
+                                <label for="status">Status</label>
+                                <select name="statusInput" id="status" required>
+                                    <option value="select">Select</option>
+                                    <option value="signing">Needs Signing</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="completed">Completed</option>
+                                </select>
+                            </div>
+                            <div id="waiting_div" class="hidden">
+                                <label for="waiting_person">Person Waiting</label>
+                                <input type="number" id="waiting_person" min="1" placeholder="Enter number of person">
+                            </div>
+                        </div>
+                        <div class="form_actions">
+                            <button type="submit">Add</button>
+                            <button type="button" id="cancelBtn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
